@@ -2,7 +2,17 @@ var mongoose= require('mongoose');
 
 var hotelSchema = new mongoose.Schema({
     //   _id: Schema.Types.ObjectId,
-      firstName: String,
-      surname: String,
-      address: { type: mongoose.Types.ObjectId, ref: 'Address'}
+    name: String,
+      city: String,
+      country:String,
+      stars: Number,
+      hasSpa: Boolean,
+      hasPool:Boolean,
+      priceCategory:Number,
+      address: String
     });
+    var model = mongoose.model('hotel',hotelSchema)
+    
+
+   
+    module.exports = model;
