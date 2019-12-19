@@ -1,18 +1,17 @@
 var mongoose= require('mongoose');
 
-var hotelSchema = new mongoose.Schema({
+var restaurantSchema = new mongoose.Schema({
     //   _id: Schema.Types.ObjectId,
     name: String,
       city: String,
       country:String,
       stars: Number,
-      hasSpa: Boolean,
-      hasPool:Boolean,
+      cuisine: String,
+      
       priceCategory:Number,
-      address: String,
-      rooms:[{ type: mongoose.Types.ObjectId, ref: 'room'}]
+      address: String
     });
-    var model = mongoose.model('hotel',hotelSchema)
+    var model = mongoose.model('Restaurant',restaurantSchema)
     
 
    
